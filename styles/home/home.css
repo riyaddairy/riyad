@@ -1,0 +1,44 @@
+.textArea {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .textArea h3 {
+    color: black;
+    margin-bottom: 10px;
+  }
+  .text-des {
+    color: gray;
+  }
+  .quote {
+    color: blueviolet;
+    margin-top: 5px;
+  }
+  .pokhanto {
+    margin-top: 10px;
+    color: rgb(56, 56, 56);
+  }
+  .reference {
+    color: brown;
+    margin-top: 5px;
+  }
+
+  .images{
+    max-width: 700px;
+    object-fit: contain;
+  }
+
+  .image-item{
+    margin-bottom: 15px;
+    justify-content: center;
+    max-width: 70px;
+    margin-left: 50px;
+    margin-right: 30px;
+  }
+
+
+
+

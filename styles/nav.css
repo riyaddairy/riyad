@@ -1,0 +1,54 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+    position: fixed;
+    margin-left: 700px;
+    z-index: 50;
+    
+
+    
+    
+}
+
+.navbar a {
+    margin: 0 10px; /* Adjust spacing between links as needed */
+    color: gray;
+    font-size: 18px;
+    text-decoration: none; /* Remove default underline */
+}
+
+.navbar a#blog {
+    color: black; /* Default active link color */
+}
+
+.navbar a:active {
+    color: black; /* Active link color */
+}
+
+
+.header {
+    
+    background-color: rgb(12, 41, 111);    width: 100%;
+    height: 40px;
+    position: fixed; 
+    top: 0;
+    z-index: 100;
+    
+}
+
+.shahada {
+    color: white;
+    margin: 0;  
+    padding: 10px;
+    text-align: center;
+    font-family: Arial;
+    word-spacing: 1.3;
+    font-size: 16px;
+    line-height: 1.2;  
+    max-width: 90%; 
+    overflow: hidden;
+    text-overflow: ellipsis;  
+    white-space: nowrap;  
+}
+

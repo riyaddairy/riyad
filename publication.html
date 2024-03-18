@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scrolling Divs</title>
+<style>
+    .post {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px; /* Adjust width as needed */
+        background-color: #f0f0f0;
+        padding: 20px;
+        border-left: 1px solid #ccc;
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+        <!-- Your 100+ divs go here -->
+        <div class="post">Div 1</div>
+        <div class="post">Div 2</div>
+        <div class="post">Div 1</div>
+        <div class="post">Div 2</div>
+        <div class="post">Div 1</div>
+        <div class="post">Div 2</div>
+        <div class="post">Div 1</div>
+        <div class="post">Div 2</div>
+        <div class="post">Div 1</div>
+        <div class="post">Div 2</div>
+        <div class="post">Div 1</div>
+        <div class="post">Div 2</div>
+        <div class="post">Div 1</div>
+        <div class="post">Div 2</div>
+        <div class="post">Div 1</div>
+        <div class="post">Div 2</div>
+        <div class="post">Div 1</div>
+        <div class="post">Div 2</div>
+        <div class="post">Div 1</div>
+        <div class="post">Div 2</div>
+        <div class="post">Div 1</div>
+        <div class="post">Div 2</div>
+        <div class="post">Div 1</div>
+        <div class="post">Div 2</div>
+        <div class="post">Div 1</div>
+        <div class="post">Div 2</div>
+        <div class="post">Div 1</div>
+        <div class="post">Div 2</div>
+        <div class="post">Div 1</div>
+        <div class="post">Div 2</div>
+        <div class="post">Div 1</div>
+        <div class="post">Div 2</div>
+        <div class="post">Div 1</div>
+        <div class="post">Div 2</div>
+        
+        <!-- Add more divs here -->
+    </div>
+
+    <div class="sidebar">
+        <button class="show-button" data-index="0">Show Div 1</button>
+        <button class="show-button" data-index="1">Show Div 2</button>
+        <button class="show-button" data-index="0">Show Div 1</button>
+        <button class="show-button" data-index="1">Show Div 2</button>
+        <button class="show-button" data-index="0">Show Div 1</button>
+        <button class="show-button" data-index="1">Show Div 2</button>
+        <button class="show-button" data-index="0">Show Div 1</button>
+        <button class="show-button" data-index="1">Show Div 2</button>
+        <button class="show-button" data-index="0">Show Div 1</button>
+        <button class="show-button" data-index="1">Show Div 2</button>
+        <button class="show-button" data-index="0">Show Div 1</button>
+        <button class="show-button" data-index="1">Show Div 2</button>
+        <button class="show-button" data-index="0">Show Div 1</button>
+        <button class="show-button" data-index="1">Show Div 2</button>
+        <button class="show-button" data-index="0">Show Div 1</button>
+        <button class="show-button" data-index="1">Show Div 2</button>
+        <button class="show-button" data-index="0">Show Div 1</button>
+        <button class="show-button" data-index="1">Show Div 2</button>
+        <button class="show-button" data-index="0">Show Div 1</button>
+        <button class="show-button" data-index="1">Show Div 2</button>
+        <button class="show-button" data-index="0">Show Div 1</button>
+        <button class="show-button" data-index="1">Show Div 2</button>
+        <button class="show-button" data-index="0">Show Div 1</button>
+        <button class="show-button" data-index="1">Show Div 2</button>
+        <button class="show-button" data-index="0">Show Div 1</button>
+        <button class="show-button" data-index="1">Show Div 2</button>
+        <button class="show-button" data-index="0">Show Div 1</button>
+        <button class="show-button" data-index="1">Show Div 2</button>
+        <button class="show-button" data-index="0">Show Div 1</button>
+        <button class="show-button" data-index="1">Show Div 2</button>
+        
+        <!-- Add more buttons here -->
+    </div>
+
+    <script >
+        document.addEventListener("DOMContentLoaded", function() {
+            const showButtons = document.querySelectorAll(".show-button");
+            const posts = document.querySelectorAll(".post");
+          
+            showButtons.forEach((button, index) => {
+                button.addEventListener("click", function() {
+                    scrollToPost(posts[index]);
+                });
+            });
+          
+            function scrollToPost(post) {
+                const postPosition = post.getBoundingClientRect().top + window.pageYOffset;
+                window.scrollTo({
+                    top: postPosition,
+                    behavior: "smooth"
+                });
+            }
+          });
+          
+    </script>
+</body>
+</html>

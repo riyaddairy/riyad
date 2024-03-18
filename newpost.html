@@ -1,0 +1,97 @@
+<div class="text-area">
+    <div class="user-details" style="margin-left:-14px; margin-bottom:5px;">
+      <div class="profile">
+          <img class="pic-jpg" src="images/dp.jpg">
+      </div>
+
+      <div class="user-info">
+          <p class="name">Mohamad Ibrahim Rifat</p>
+          <p class="date">12.03.2024</p>
+      </div>
+
+      <div class="verified">
+          <img class="verify">
+          <img class="verify-icon" src="images/verified.png">
+      </div>
+  </div>
+
+    <h3>পরকাল</h3>
+    <p class="text-des">
+      মহান আল্লাহ মুমিনদেরকে পার্থিব জীবনে এবং পরকালে মজবুত বাক্য দ্বারা অবিচল রাখেন।
+      <span class="quote">(ইবরাহীম ১৪/২৭)</span>
+      <p style="color:rgb(77, 77, 77)">
+      এখানে পরকালের একটি অর্থ হচ্ছে, কবর। বারা ইবনে আযেব কাজিয়া হতে বর্ণিত দীর্ঘ একটি হাদীছে কুদসীতে 'আনহ এসেছে, আসমান থেকে একজন ঘোষণাকারী ঘোষণা দেন যে, আমার বান্দা সত্য বলেছে। অতএব, তার জন্য জান্নাতের বিছানা বিছিয়ে দাও, তাকে জান্নাতের পোষাক পরিয়ে দাও এবং তার জন্য জান্নাত পর্যন্ত একটি দরজা খুলে দাও, যেদিক দিয়ে তার কাছে জান্নাতের সুবাতাস ও সুঘ্রাণ আসবে। আর যত দূর তার চোখ যায়, তত দূর পর্যন্ত তার কবরকে সম্প্রসারিত করা হবে।
+    </p>
+    </p>
+    <p class="pokhanto">
+      পক্ষান্তরে,
+    </p>
+    <p class="pokhanto">
+      মৃত ব্যক্তি কাফের হলে সে ফেরেশতাদ্বয়ের প্রশ্নোত্তরে ব্যর্থ হবে। ফলে একজন ঘোষণাকারী এমর্মে ঘোষণা দিবেন যে, সে মিথ্যা বলেছে। অতএব, তার জন্য জাহান্নামের বিছানা বিছিয়ে দাও, তাকে জাহান্নামের পোষাক পরিয়ে দাও এবং তার জন্য জাহান্নাম পর্যন্ত একটি দরজা খুলে দাও, যেদিক দিয়ে তার কাছে জাহান্নামের তাপ ও বিষ আসবে। আর তার কবরকে তার জন্য এমন সংকীর্ণ করা হবে যে, তার পাঁজরের হাড়-হাড্ডি একটি আরেকটার মধ্যে ঢুকে যাবে।
+    </p>
+    <p class="pokhanto">
+      অতঃপর কাফেরের জন্য লোহার হাতুড়ি দিয়ে একজন অন্ধ এবং বধির ফেরেশতা নিযুক্ত করা হবে; ঐ হাতুড়ি দিয়ে যদি পাহাড়কেও মারা হয়, তবুও পাহাড় মাটি হয়ে যাবে।
+    </p>
+    <p class="pokhanto">
+      ফেরেশতা ঐ হাতুড়ি দিয়ে তাকে এমন আঘাত করবেন, মানুষ ও জিন ব্যতীত সবাই তার চিৎকার শুনতে পাবে। অতঃপর সে মাটির সাথে মিশে যাবে, তারপর তার মধ্যে আবার রূহ প্রদান করা হবে।
+    </p>
+    <p class="reference">(সুনানে আবূ দাঊদ, হা/৪৬৭৮)</p>
+
+    <div class="image-item">
+      <img class="kabor" src="images/home/image.png">
+  </div>
+  </div>
+
+
+
+
+
+<div class="container">
+    <div class="newsfeed">
+        <div class="user-details">
+            <div class="profile">
+                <img class="pic-jpg" src="images/dp.jpg">
+            </div>
+            <div class="user-info">
+                <p class="name">Mohamad Ibrahim Rifat</p>
+                <p class="date">12.03.2024</p>
+            </div>
+            <div class="verified">
+                <img class="verify">
+                <img class="verify-icon" src="images/verified.png">
+            </div>
+        </div>
+        <div class="text-area">
+            <h3 class="headingg">Creation of Linked list</h3>
+            <p class="text-des">
+                A linked list is created by using the node class we studied in the last chapter. We create a Node object and create another class to use this ode object. We pass the appropriate values through the node object to point the to the next data elements. The below program creates the linked list with three data elements. In the next section we will see how to traverse the linked list.
+            </p>
+        </div>
+        <div class="image-item">
+            <img class="binary-search" src="images/check.png">
+        </div>
+        <div class="containers">
+            <button class="copy-button" onclick="copyCode()">Copy</button>
+            <pre><code class="language-python">
+class Node:
+   def __init__(self, dataval=None):
+      self.dataval = dataval
+      self.nextval = None
+
+class SLinkedList:
+   def __init__(self):
+      self.headval = None
+
+list1 = SLinkedList()
+list1.headval = Node("Mon")
+e2 = Node("Tue")
+e3 = Node("Wed")
+# Link first Node to second node
+list1.headval.nextval = e2
+
+# Link second Node to third node
+e2.nextval = e3
+            </code></pre>
+        </div>
+    </div>
+</div>

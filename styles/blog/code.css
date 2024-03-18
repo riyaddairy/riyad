@@ -1,0 +1,29 @@
+.language-python {
+    height: auto;
+    width: 600px;
+    z-index: 1;
+    
+  }
+  .containers {
+    border: 1px solid rgb(0, 0, 0);
+    width: 650px;
+    z-index: 3;
+    height: auto;
+    position: relative; /* Added */
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .language-python:hover {
+    background-color: white;
+  }
+  .copy-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }

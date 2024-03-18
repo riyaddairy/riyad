@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Code Highlighting</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css">
+  <style>
+    .language-python {
+      height: auto;
+      width: 600px;
+      z-index: 1;
+      
+    }
+    .container {
+      border: 1px solid black;
+      width: 600px;
+      z-index: 3;
+      height: auto;
+      position: relative; /* Added */
+    }
+    .language-python:hover {
+      color:white;
+      background-color: rgb(44, 44, 44);
+    }
+    .copy-button {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <button class="copy-button" onclick="copyCode()">Copy</button> <!-- Added button -->
+  <pre><code class="language-python">
+def greet(name):
+    print("Hello, " + name)
+            
+greet("World")
+  </code></pre>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-python.min.js"></script>
+
+<script>
+  function copyCode() {
+    const code = document.querySelector('.container code');
+    const selection = window.getSelection();
+    const range = document.createRange();
+    range.selectNodeContents(code);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    document.execCommand('copy');
+    selection.removeAllRanges();
+  }
+</script>
+
+</body>
+</html>
