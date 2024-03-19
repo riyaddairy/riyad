@@ -1,26 +1,33 @@
 .navbar {
     display: flex;
-    justify-content: center;
-    margin-top: 45px;
+    justify-content: center; /* Horizontally center align items */
+    align-items: center; /* Vertically center align items */
     position: fixed;
-    margin-left: 700px;
+    width: 100%; /* Ensure the nav spans the entire width */
     z-index: 50;
-    
+    background-color: #000000; /* Example background color */
+    padding-top:5px;
+    padding-bottom: 5px;
+}
 
-    
-    
+.navbar a {
+    margin: 0 10px; /* Add spacing between the links */
+    text-decoration: none;
+    font-family: "Basic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000; /* Example link color */
+
 }
 
 .navbar a {
     margin: 0 10px; /* Adjust spacing between links as needed */
-    color: gray;
+    color: rgb(253, 253, 253);
     font-size: 18px;
     text-decoration: none; /* Remove default underline */
 }
 
-.navbar a#blog {
-    color: black; /* Default active link color */
-}
+
 
 .navbar a:active {
     color: black; /* Active link color */
