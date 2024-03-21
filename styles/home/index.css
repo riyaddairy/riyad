@@ -12,7 +12,8 @@
     padding-bottom: var(--dl-space-space-halfunit);
     background-color: var(--dl-color-primary-100);
   }
-  
+
+
   .outline-button-container {
     display: flex;
     position: relative;
