@@ -87,8 +87,8 @@
     flex-direction: column;
     background-size: cover;
     background-size: contain;
-    background-image: url("jubba.jpg");
-    background-position: 0% 40%;
+    background-image: url("yollowbg.jpg");
+    background-position: 0% 20%;
   }
   .landing-page-navbar {
     width: 100%;
