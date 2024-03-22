@@ -1,0 +1,11 @@
+body{
+    background-size: cover;
+    object-fit: contain;
+    justify-content: center;
+    height: auto;
+    background-image: url("poembg.jpg");
+}
+.textArea{
+    max-width: 500px;
+    min-width: 400px;
+}
