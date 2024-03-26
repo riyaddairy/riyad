@@ -1,139 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Post System</title>
-  <style>
-    /* CSS styles */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f8f9fa;
-      margin: 0;
-      padding: 20px;
-    }
-    .textArea {
-      background-color: #fff;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      padding: 20px;
-      margin-bottom: 20px;
-    }
-    .profile img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-    }
-    .user-details {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-    .name {
-      font-weight: bold;
-      margin: 0;
-    }
-    .date {
-      color: #888;
-      margin: 0;
-      font-size: 0.9em;
-    }
-    .verified img {
-      width: 20px;
-      height: 20px;
-      margin-left: 5px;
-    }
-    h3 {
-      color: red;
-      margin-top: 20px;
-      margin-bottom: 10px;
-    }
-    textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      resize: vertical;
-    }
-    .image-item {
-      margin-top: 10px;
-    }
-    #selected-image {
-      max-width: 100%;
-      height: auto;
-      margin-top: 10px;
-      display: none;
-    }
-    button {
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    button:hover {
-      background-color: #0056b3;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post System</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .textArea {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .profile img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .user-details {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .name {
+            font-weight: bold;
+            margin: 0;
+        }
+        .date {
+            color: #888;
+            margin: 0;
+            font-size: 0.9em;
+        }
+        .verified img {
+            width: 20px;
+            height: 20px;
+            margin-left: 5px;
+        }
+        h3 {
+            color: red;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p {
+            word-wrap: break-word;
+            white-space: pre-wrap;
+            color: rgb(68, 68, 68);
+            line-height: 1.6;
+            word-spacing: 2px;
+            margin: 0;
+        }
+        .image-item {
+            margin-top: 10px;
+        }
+        .image {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+        .delete-btn {
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .delete-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
 </head>
 <body>
-  <div class="textArea">
+<div class="textArea">
     <div class="user-details">
-      <div class="profile">
-        <img class="pic-jpg" src="images/dp.jpg" alt="Profile Picture">
-      </div>
-      <div class="user-info">
-        <p class="name">Ismail Riyad</p>
-        <p class="date">23.03.2024</p>
-      </div>
-      <div class="verified">
-        <span>Verified</span>
-        <img class="verify-icon" src="images/verified.png" alt="Verified Icon">
-      </div>
+        <div class="profile">
+            <img class="pic-jpg" src="images/dp.jpg" alt="Profile Picture">
+        </div>
+        <div class="user-info">
+            <p class="name">Ismail Riyad</p>
+            <p class="date">23.03.2024</p>
+        </div>
+        <div class="verified">
+            <span>Verified</span>
+            <img class="verify-icon" src="images/verified.png" alt="Verified Icon">
+        </div>
     </div>
-     
-    <textarea id="caption" placeholder="Write your caption here..." rows="4" style="word-wrap: break-word; white-space: pre-wrap; color: rgb(68, 68, 68); line-height:1.6;  word-spacing: 2px;"></textarea>
+    <h3>Caption</h3>
+    <textarea id="caption" placeholder="Write your caption here..." rows="4"></textarea>
     <div class="image-item">
-      <label for="image">Select Image:</label>
-      <input type="file" id="image" accept="image/*">
-      <img id="selected-image">
+        <label for="image">Select Image:</label>
+        <input type="file" id="image" accept="image/*">
+        <img id="selected-image">
     </div>
     <button onclick="post()">Post</button>
-  </div>
+</div>
 
-  <script>
+<script>
     function post() {
-      var caption = document.getElementById('caption').value;
-      var image = document.getElementById('selected-image').src;
+        var caption = document.getElementById('caption').value;
+        var image = document.getElementById('selected-image').src;
 
-      if (caption.trim() !== '' && image.trim() !== '') {
-        var postData = {
-          caption: caption,
-          image: image
-        };
+        if (caption.trim() !== '' && image.trim() !== '') {
+            var newPostHTML = `
+                <div class="textArea">
+                    <div class="user-details">
+                        <div class="profile">
+                            <img class="pic-jpg" src="images/dp.jpg" alt="Profile Picture">
+                        </div>
+                        <div class="user-info">
+                            <p class="name">Ismail Riyad</p>
+                            <p class="date">23.03.2024</p>
+                        </div>
+                        <div class="verified">
+                            <span>Verified</span>
+                            <img class="verify-icon" src="images/verified.png" alt="Verified Icon">
+                        </div>
+                    </div>
+                    <h3>Caption</h3>
+                    <p>${caption}</p>
+                    <div class="image-item">
+                        <img class="image" src="${image}" alt="Posted Image">
+                    </div>
+                </div>
+            `;
 
-        // Store the post data in local storage
-        localStorage.setItem('post_' + new Date().getTime(), JSON.stringify(postData));
+            // Append new post HTML to blog.html
+            var blogPosts = localStorage.getItem('blogPosts');
+            if (!blogPosts) {
+                blogPosts = '';
+            }
+            blogPosts = newPostHTML + blogPosts;
+            localStorage.setItem('blogPosts', blogPosts);
 
-        // Redirect to blog.html after posting
-        window.location.href = 'blog.html';
-      } else {
-        alert('Please enter a caption and select an image.');
-      }
+            // Redirect to blog.html after posting
+            window.location.href = 'blog.html';
+        } else {
+            alert('Please enter a caption and select an image.');
+        }
     }
 
     document.getElementById('image').addEventListener('change', function(event) {
-      var selectedImage = document.getElementById('selected-image');
-      selectedImage.style.display = 'block';
-      var file = event.target.files[0];
-      var reader = new FileReader();
-      reader.onload = function(e) {
-        selectedImage.src = e.target.result;
-      };
-      reader.readAsDataURL(file);
+        var selectedImage = document.getElementById('selected-image');
+        selectedImage.style.display = 'block';
+        var file = event.target.files[0];
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            selectedImage.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
     });
-  </script>
+</script>
 </body>
 </html>
