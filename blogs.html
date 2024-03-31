@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riyad Dairy</title>
+    <!-- Your CSS links -->
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/icon.css">
+    <link rel="stylesheet" href="styles/blog/sidebar.css">
+    <link rel="stylesheet" href="styles/blog/post.css">
+    <link rel="stylesheet" href="styles/blog/code.css">
+    <link rel="stylesheet" href="styles/home/home.css">
+    <link rel="stylesheet" href="styles/home/scroll.css">
+    
+    <!-- Your additional CSS styles -->
+    <style>
+        .delete-btn {
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .delete-btn:hover {
+            background-color: #c82333;
+        }
+        p {
+            word-wrap: break-word;
+            white-space: pre-wrap;
+            color: rgb(68, 68, 68);
+            line-height: 2.5;
+            word-spacing: 2px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Your navigation -->
+    <nav class="navbar">
+        <!-- Navigation links -->
+    </nav>
+
+    <div class="container">
+        <div class="left-side">
+            <!-- Left-side content, if any -->
+        </div>
+
+        <div id="blog-posts" class="newsfeed">
+            <!-- Existing blog posts will be appended here -->
+        </div>
+    </div>
+
+    <!-- Your JavaScript scripts -->
+    <script src="scripts/nav.js"></script>
+    <script src="scripts/readmore.js"></script>
+    <script>
+        // Retrieve posts from local storage and display them
+        document.addEventListener('DOMContentLoaded', function() {
+            var blogPosts = document.getElementById('blog-posts');
+            var keys = [];
+            for (var i = 0; i < localStorage.length; i++) {
+                var key = localStorage.key(i);
+                if (key.startsWith('post_')) {
+                    keys.push(key);
+                }
+            }
+            keys.sort().reverse(); // Reverse to show latest post on top
+            keys.forEach(function(key) {
+                var postData = JSON.parse(localStorage.getItem(key));
+                var postArea = document.createElement('div');
+                postArea.classList.add('textArea');
+
+                // User details
+                var userDetails = document.createElement('div');
+                userDetails.classList.add('user-details');
+                userDetails.innerHTML = `
+                    <div class="profile">
+                        <img class="pic-jpg" src="images/dp.jpg" alt="Profile Picture">
+                    </div>
+                    <div class="user-info">
+                        <p class="name">Ismail Riyad</p>
+                        <p class="date">${new Date(parseInt(key.split('_')[1])).toLocaleDateString()}</p>
+                    </div>
+                    <div class="verified">
+                        <span>Verified</span>
+                        <img class="verify-icon" src="images/verified.png" alt="Verified Icon">
+                    </div>
+                `;
+                postArea.appendChild(userDetails);
+
+                // Caption
+                var captionHeader = document.createElement('h3');
+                captionHeader.textContent = 'Caption';
+                postArea.appendChild(captionHeader);
+
+                var captionParagraph = document.createElement('p');
+                captionParagraph.textContent = postData.caption;
+                postArea.appendChild(captionParagraph);
+
+                // Image
+                if (postData.image) {
+                    var imageItem = document.createElement('div');
+                    imageItem.classList.add('image-item');
+                    var postedImage = document.createElement('img');
+                    postedImage.classList.add('image');
+                    postedImage.src = postData.image;
+                    imageItem.appendChild(postedImage);
+                    postArea.appendChild(imageItem);
+                }
+ 
+                // Delete button
+                var deleteButton = document.createElement('button');
+                deleteButton.classList.add('delete-btn');
+                deleteButton.textContent = 'Delete';
+                deleteButton.addEventListener('click', function() {
+                    localStorage.removeItem(key);
+                    postArea.remove();
+                });
+                postArea.appendChild(deleteButton);
+
+                blogPosts.appendChild(postArea);
+            });
+        });
+    </script>
+</body>
+</html>

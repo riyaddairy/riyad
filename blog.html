@@ -19,7 +19,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Basic&family=Noto+Serif+Bengali:wght@100..900&display=swap" rel="stylesheet">
 
 <style>
-
+  .delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .delete-btn:hover {
+    background-color: #c82333;
+  }
+  p {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    color: rgb(68, 68, 68);
+    line-height: 2.5;
+    word-spacing: 2px;
+    margin: 0;
+  }
 </style>
 
 </head>
@@ -341,11 +360,7 @@
                 <h3 style="color: rgb(72, 0, 255);">তাদের হেদায়েত অথবা, লাঞ্চিত ভগ্নদশায় দেখাতে পাওয়াটা আমার স্বপ্ন।
                 </h3>
 
-                <div class="share-div">
-                <button class="share-btn" onclick="shareOnFacebook()">
-                  <img class="share-icon" src="images/share.png" alt="Share on Facebook"> Share on Facebook
-                </button>
-              </div>
+                
   
             </div>
 
@@ -371,11 +386,7 @@
                 <source src="video/quranTalwat.mp4">
               </video>
 
-                <div class="share-div">
-                <button class="share-btn" onclick="shareOnFacebook()">
-                  <img class="share-icon" src="images/share.png" alt="Share on Facebook"> Share on Facebook
-                </button>
-              </div>
+                
             </div>
 
             <div class="textArea" >
@@ -399,12 +410,7 @@
             <p>
               <span style="color: blueviolet;"> ইতিহাস</span>  চর্চা করলে দেখা যায়, ইতিহাসে যারা <span style="color: rgb(205, 0, 0);"> আহাম্মক নালায়েক</span>  উপাধিতে ভূষিত হয়েছিলেন, <span style="color: rgb(0, 74, 248);"> কালের বিবর্তনে তারাই হয়ে গেলেন মহানায়ক!!</span> তাদের গুণগ্রাহীতা এবং সন্মানের প্রভাব প্রতিপত্তি রক্ষায় এতো-শত কঠোর দমননীতি! আর সর্বকালের সর্বশ্রেষ্ঠ মহামানব মুহাম্মদ সল্লাল্লাহু আলাইহি ওয়াসাল্লাম এর অপমান এবং ইসলাম ধর্ম অবমাননায় অন্ধত্ব আইনের গতি! ইতিহাস মুছে যায়নি, সঠিক পরিচর্যার অভাবে ঢাকা পরেছে মাত্র।
             </p>
-
-                <div class="share-div">
-                <button class="share-btn" onclick="shareOnFacebook()">
-                  <img class="share-icon" src="images/share.png" alt="Share on Facebook"> Share on Facebook
-                </button>
-              </div>
+ 
 
             </div>
 
@@ -446,11 +452,7 @@
               </p>
               <p style="color: brown;">কার্টেসীঃ শাইখ আবু বকর মোহাম্মদ যাকারিয়া হাফিজাহুল্লাহ।
             </p>
-                <div class="share-div">
-                <button class="share-btn" onclick="shareOnFacebook()">
-                  <img class="share-icon" src="images/share.png" alt="Share on Facebook"> Share on Facebook
-                </button>
-              </div>
+                 
   
             </div>
             
@@ -478,12 +480,7 @@
               <p style="color: rgb(52, 52, 52);">
                 বর্তমান জেনারেশন জানেই না, উপনিবেশ গোলামীর গল্প, ঘরের মানুষের কাছে হেরে যাওয়া পরাজিত সম্রাটের গল্প, গো হত্যা মহাপাপের গল্প, শ্রেণী সংগ্রামের গল্প, জোতদার সুদি মাহাজনের গল্প, আসামের বাঙালি খেদাও লাইন প্রথার গল্প, ফারাক্কা বাঁধে আঁটকে পড়া কৃষি জমি মরুভূমি হওয়ার গল্প, কৃষক আন্দোলন - গণঅভ্যুত্থানের গল্প, ৬'এ ডিসেম্বর সৈন্য প্রেরনের গল্প, লুঠতরাজের গল্প, স্বাধীনতার পরে-ও সৈন্য প্রত্যাহার না করতে কাকুতি 
               </p>
-
-                <div class="share-div">
-                <button class="share-btn" onclick="shareOnFacebook()">
-                  <img class="share-icon" src="images/share.png" alt="Share on Facebook"> Share on Facebook
-                </button>
-              </div>
+ 
   
             </div>
 
@@ -517,11 +514,7 @@
       <img class="image" src="images/blog/brac.jpg">
   </div>
 
-                <div class="share-div">
-                <button class="share-btn" onclick="shareOnFacebook()">
-                  <img class="share-icon" src="images/share.png" alt="Share on Facebook"> Share on Facebook
-                </button>
-              </div>
+               
               </div>
 
 
@@ -595,8 +588,7 @@
     
       
     </script>
-<script src="scripts/share.js"></script>
-    <script src="scripts/readmore.js"></script>
+     <script src="scripts/readmore.js"></script>
 
 
 <script>
@@ -613,76 +605,6 @@
   </script>
   
  
-  <script>
-    // Retrieve posts from local storage and display them
-    document.addEventListener('DOMContentLoaded', function() {
-      var blogPosts = document.getElementById('blog-posts');
-      var keys = [];
-      for (var i = 0; i < localStorage.length; i++) {
-        var key = localStorage.key(i);
-        if (key.startsWith('post_')) {
-          keys.push(key);
-        }
-      }
-      keys.sort().reverse(); // Reverse to show latest post on top
-      keys.forEach(function(key) {
-        var postData = JSON.parse(localStorage.getItem(key));
-        var postArea = document.createElement('div');
-        postArea.classList.add('textArea');
-
-        // User details
-        var userDetails = document.createElement('div');
-        userDetails.classList.add('user-details');
-        userDetails.innerHTML = `
-          <div class="profile">
-            <img class="pic-jpg" src="images/dp.jpg" alt="Profile Picture">
-          </div>
-          <div class="user-info">
-            <p class="name">Ismail Riyad</p>
-            <p class="date">${new Date(parseInt(key.split('_')[1])).toLocaleDateString()}</p>
-          </div>
-          <div class="verified">
-            <span>Verified</span>
-            <img class="verify-icon" src="images/verified.png" alt="Verified Icon">
-          </div>
-        `;
-        postArea.appendChild(userDetails);
-
-        // Caption
-        var captionHeader = document.createElement('h3');
-        captionHeader.textContent = 'Caption';
-        postArea.appendChild(captionHeader);
-
-        var captionParagraph = document.createElement('p');
-        captionParagraph.textContent = postData.caption;
-        postArea.appendChild(captionParagraph);
-
-        // Image
-        if (postData.image) {
-          var imageItem = document.createElement('div');
-          imageItem.classList.add('image-item');
-          var postedImage = document.createElement('img');
-          postedImage.classList.add('image');
-          postedImage.src = postData.image;
-          imageItem.appendChild(postedImage);
-          postArea.appendChild(imageItem);
-        }
-
-        // Delete button
-        var deleteButton = document.createElement('button');
-        deleteButton.classList.add('delete-btn');
-        deleteButton.textContent = 'Delete';
-        deleteButton.addEventListener('click', function() {
-          localStorage.removeItem(key);
-          postArea.remove();
-        });
-        postArea.appendChild(deleteButton);
-
-        blogPosts.appendChild(postArea);
-      });
-    });
-  </script>
-
 
 
 </body>

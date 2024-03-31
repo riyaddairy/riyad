@@ -124,7 +124,7 @@
                             <img class="verify-icon" src="images/verified.png" alt="Verified Icon">
                         </div>
                     </div>
-                    <h3>Caption</h3>
+                     
                     <p>${caption}</p>
                     <div class="image-item">
                         <img class="image" src="${image}" alt="Posted Image">
@@ -133,15 +133,15 @@
             `;
 
             // Append new post HTML to blog.html
-            var blogPosts = localStorage.getItem('blogPosts');
-            if (!blogPosts) {
-                blogPosts = '';
+            var blogPost = localStorage.getItem('blogPost');
+            if (!blogPost) {
+                blogPost = '';
             }
-            blogPosts = newPostHTML + blogPosts;
-            localStorage.setItem('blogPosts', blogPosts);
+            blogPost = newPostHTML + blogPost;
+            localStorage.setItem('blogPost', blogPost);
 
             // Redirect to blog.html after posting
-            window.location.href = 'blog.html';
+            window.location.href = 'blogs.html';
         } else {
             alert('Please enter a caption and select an image.');
         }
