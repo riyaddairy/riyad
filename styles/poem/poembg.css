@@ -13,3 +13,48 @@ body {
     min-width: 400px;  
     
 }
+.left-side{
+    margin-top: 34px;
+    display: grid;
+    width: 200px;
+    height: auto;
+    background-color: white;
+    border: 1px solid black;
+    margin-left: 5px;
+    padding: 5px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+
+
+
+
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 999;
+    text-align: center;
+    margin-top: -20px;
+    height: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* Hide the sidebar by default on smaller screens */
+    .left-side {
+        display: none;
+    }
+    
+    /* Show the sidebar when it's toggled */
+    .left-side.show {
+        display: grid;
+    }
+}
