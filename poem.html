@@ -1,190 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poem</title>
-    <link rel="icon" href="images/dp.jpg" type="image/png">
-    <link rel="stylesheet" href="styles/nav.css">
-    <link rel="stylesheet" href="styles/icon.css">
-    <link rel="stylesheet" href="styles/blog/sidebar.css">
-    <link rel="stylesheet" href="styles/blog/post.css">
-    <link rel="stylesheet" href="styles/blog/code.css">
-    <link rel="stylesheet" href="styles/home/home.css">
-    <link rel="stylesheet" href="styles/home/scroll.css">
-    <link rel="stylesheet" href="styles/poem/poembg.css">
-
-
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Basic&family=Noto+Serif+Bengali:wght@100..900&display=swap" rel="stylesheet">
-
-     
-
-
-</head>
-<body>
-
-  
-
-
-    <nav class="navbar">
-        <a href="index.html"  id="home">Home</a>
-        <a href="blog.html"  id="blog">Blog</a>
-        <a href="poem.html"  id="poem">Poem</a>
-        <a href="quote.html" id="quote">Quote</a>
-         <a href="falseDoctrine.html" id="falsedoctrine">False Doctrine</a>
-         <a href="bookReview.html" id="publication">Book Review</a>
-        <a href="about.html" target="_blank" id="about">About</a>
-    </nav>
-
-
-    <div class="container">
-
+    <html lang="en">
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Poem</title>
+        <link rel="icon" href="images/dp.jpg" type="image/png">
+        <link rel="stylesheet" href="styles/nav.css">
+        <link rel="stylesheet" href="styles/icon.css">
+        
        
-      <button class="toggle-btn" onclick="toggleSidebar()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5"/>
-      </svg></button>
- 
-      
+        <link rel="stylesheet" href="styles/blog/code.css">
+        <link rel="stylesheet" href="styles/home/home.css">
+        <link rel="stylesheet" href="styles/home/scroll.css">
+        
+    
+    
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Basic&family=Noto+Serif+Bengali:wght@100..900&display=swap" rel="stylesheet">
+    
+        <!--=============== BOXICONS ===============-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Poem</title>
+
+        <style>
+            .navbar {
+                
+                margin-top:-40px;
+            
+            }
+        </style>
+    </head>
+    <body>
+
+
+        <nav class="navbar">
+            <a href="index.html"  id="home">Home</a>
+            <a href="blog.html"  id="blog">Blog</a>
+            <a href="poem.html"  id="poem">Poem</a>
+            <a href="quote.html" id="quote">Quote</a>
+             <a href="falseDoctrine.html" id="falsedoctrine">False Doctrine</a>
+             <a href="bookReview.html" id="publication">Book Review</a>
+            <a href="about.html" target="_blank" id="about">About</a>
+        </nav>
+
+
         <div class="left-side"  id="leftSide">
-          <ul class="index-list">
-              <li><a class="index-link" href="#akash">আকাশের নিলাম</a></li>
-              <li><a class="index-link" href="#sorol">সরল সুন্দর</a></li>
-              <li><a class="index-link" href="#sokh">দস্যুচোখে পাতানো সুখ</a></li>
-              <!-- Add more index items as needed -->
-          </ul>
-      </div>
-      
+            <ul class="index-list">
+                <li><a class="index-link" href="#akash">আকাশের নিলাম</a></li>
+                <li><a class="index-link" href="#sorol">সরল সুন্দর</a></li>
+                <li><a class="index-link" href="#sokh">দস্যুচোখে পাতানো সুখ</a></li>
+                <!-- Add more index items as needed -->
+            </ul>
+        </div>
+        
+
+        <section class="accordion container">
+            <div class="accordion__container">
 
 
-        <div class="newsfeed">
-
-          <div class="textArea">
-            <div class="user-details" style="margin-left: -14px; margin-bottom: 5px;">
-              <div class="profile">
-                <img class="pic-jpg" src="images/dp.jpg">
-              </div>
-          
-              <div class="user-info" id="akash">
-                <p class="name">Ismail Riyad</p>
-                <p class="date">28.04.2024</p>
-              </div>
-          
-              <div class="verified">
-                <img class="verify">
-                <img class="verify-icon" src="images/verified.png">
-              </div>
-            </div>
-          
-            <h3 style="color: #005A5B;"> আকাশের নিলাম </h3>
-          
-            <div style="word-wrap: break-word; white-space: pre-wrap; color: rgb(68, 68, 68); line-height:1.6;  word-spacing: 2px;">
-              আরে আরে সুমতি বানু যে; কেমন আছ বল শুনি,
-              সোয়া লক্ষ কুটি বছর পর দেখা, না-কি তার-ও বেশি! 
-              তা বটতলায় ঘর বাধার স্বপ্ন'টা কি এখনো আছে! না-কি চকচকে কংক্রিটের মায়ায় হারিয়ে গেছে, 
-              যাই বল; বটতলার ঝর জঞ্জাট থেকে বেচে গেলে, 
-              আচ্ছা বানু আজও কি হেয়ালি দূরত্বে হৃদয়ে ঝর উঠে!  
-              সুমতি বানু 
-              তুমি যে পাশে থাকার শর্তে আকাশটা নিলামে চেয়েছিলে, আকাশ পেয়ে গেছো! 
-              আকাশের নীল কি এখন আর কালো মেঘে ছেয়ে যায় না, 
-              সাদা আঁচল কি বাতাসে ছুটে পালায় না! 
-              কি দামে নিলে আকাশটা.....অর্থ না-কি অগাধ ভালবাসা 
-              সুমতি বানু 
-              তুমি বেচে গেলে, শতবর্ষী বটবৃক্ষ'টা এখন দস্যুদের পেটে
-              বটবৃক্ষের তলায় এখন দেবদারুর চারা গজিয়েছে, ছায়া নেই!
-              দেবদারু গাছের কি মায়া! আশেপাশের সব চড়ুইরা বাসা বেধেছে, 
-              কত হাজার হাজার বিশ্বস্ত সংসার, 
-              বিশ্বস্ত! হা; দেখছ না, জিরাফ চূড়া গাছে একটা'ও বাসা নেই
-              ঝর বাদলের ভয় নেই, তাপ প্রহারের অস্বস্তি নেই।
-              কে, আমি!
-              আকাশ কিনার মুরোদ'টা এখনো হয়ে উঠেনি
-              এই যে দেবদারু গাছটা দেখছ, প্রতিদিন কড়া রোদে চড়ুইদের বিচ্ছেদের অপেক্ষা করি,
-              সমস্যা কি জানো! ঐদিকে চড়ুইরা কেউ বিচ্ছেদ ঘটায়নি 
-              রোজ ঝগড়া হয়, কিন্তু সূর্যের তেজ কমার আগেই তারা নিস্তেজ হয়।
-              এ নিয়ে তুমি ভেবোনা, ডানা ছাড়া প্রাণের সান্নিধ্যে আমি থাকছি না
-              যাই বল; বটতলার ঝর জঞ্জাট থেকে বেচে গেলে, 
-              আচ্ছা বানু আজও কি হেয়ালি দূরত্বে হৃদয়ে ঝর উঠে!
-          
-              _রিয়াদ
-           <div class="image-item">
-                <img class="image" src="images/poem/akash.png">
-              </div>
-          </div>
-          
-          </div>
-  
-
-          <div class="textArea">
-            <div class="user-details" style="margin-left: -14px; margin-bottom: 5px;">
-              <div class="profile">
-                <img class="pic-jpg" src="images/dp.jpg">
-              </div>
-          
-              <div class="user-info" id="sorol">
-                <p class="name">Ismail Riyad</p>
-                <p class="date">28.04.2024</p>
-              </div>
-          
-              <div class="verified">
-                <img class="verify">
-                <img class="verify-icon" src="images/verified.png">
-              </div>
-            </div>
-          
-            <h3 style="color: #005A5B;">সরল সুন্দর </h3>
-          
-            <div style="word-wrap: break-word; white-space: pre-wrap; color: rgb(68, 68, 68); line-height:1.6;  word-spacing: 2px;">
-              ইট বালুর ব্যাস্ত নগরে
-          যদি একমুঠো রুক্ষ বকুল এনে বলি ভালবাসি,
-          তবে কি মুঠোভরা ভালবাসায় আমায় আপন করে নেবে,
-          না-কি কংক্রিটের শুষ্ক আঘাতে হৃদয় চূর্ণবিচূর্ণ হবে!
-          চক্ষু লজ্জার সীমানা ডিঙিয়ে এ আমার প্রথম পদার্পণ। 
-          বড্ড তৃষ্ণা পেয়েছে, 
-          শুষ্ক গলায় যদি দীঘির জলে তৃষ্ণা নিবারণ করি, 
-          তবে কি খুব ঘৃণা জন্মাবে!
-          অনেকটা পথ হেটে এসেছি, মাসের শেষ পকেট ফুরিয়ে এসেছে, 
-          সকাল রাতে কিচ্ছু খাইনি, বলি; তুমি কি বাদাম খাবে!
-          একাকাশ স্বপ্ন নিয়ে এসেছিলাম, শব্দদূষণে গুলিয়ে গেছে,
-          দূষণ, আচ্ছা দূষণ ছাড়া কি সম্পর্ক গড়ে! 
-          চুপ করে আছে যে, বকুল পছন্দ হয় নি, রুক্ষ তাই-না! 
-          শুঁকে দেখো...
-          অহ শুদ্ধ গোলাপ ছাড়া বুঝি প্রেম হয় না!
-          ছেঁড়া জুতা! ওই একটু ফেটে গেছে, সারিয়ে নিলেই হবে
-          তবে হৃদয় ভাঙ্গার ব্যপারটায় খেয়াল রেখো।
-          শার্টের কুজ! তা ঘষিয়ে নিব; নিবারন কাকা ছুটিতে আছে
-          তুমি চাইলে সামনের মাসে নতুন নিয়ে নিবো, চার চারটে টিউশন
-          তবে হৃদয় ভাঙ্গার ব্যপারটায় খেয়াল রেখো।
-              _রিয়াদ
-           <div class="image-item">
-                <img class="image" src="images/poem/sorol.png">
-              </div>
-          </div>
-          
-          </div>
-              
-          <div class="textArea">
-            <div class="user-details" style="margin-left: -14px; margin-bottom: 5px;">
-              <div class="profile">
-                <img class="pic-jpg" src="images/dp.jpg">
-              </div>
-          
-              <div class="user-info" id="sokh">
-                <p class="name">Ismail Riyad</p>
-                <p class="date">28.04.2024</p>
-              </div>
-          
-              <div class="verified">
-                <img class="verify">
-                <img class="verify-icon" src="images/verified.png">
-              </div>
-            </div>
-          
-            <h3 style="color: #005A5B;">দস্যুচোখে পাতানো সুখ</h3>
-          
-            <div style="word-wrap: break-word; white-space: pre-wrap; color: rgb(68, 68, 68); line-height:1.6;  word-spacing: 2px;">
-              যদি হৃদয় বসন্তে কোকিল গান গায়,
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <i class='bx bx-plus accordion__icon'></i>
+                        <h3 class="accordion__title">দস্যুচোখে পাতানো সুখ</h3>
+                    </header>
+    
+                    <div class="accordion__content">
+                        <p class="accordion__description">
+                            যদি হৃদয় বসন্তে কোকিল গান গায়,
               তবে ঋতু চক্রের তারতম্যে কেন সে পালিয়ে বেড়ায়!
               কর্কশ কাক যখন মাতৃত্বের দহনে গৃহ বন্দী, 
               মিষ্টি কোকিল তখন যাযাবর জীবন নিয়ে দেশ দেশান্তরে খুঁজে জীবনের সন্ধি।
@@ -213,89 +102,195 @@
               পরের শান্ত ইঁচড়েপাকা! বকে ফেলেছে সমাজ গোটা।
               থলের বিড়াল পড়শি'য়ে বাঘ গর্জনে তার লজ্জা নিপাত।
               _রিয়াদ
-           <div class="image-item">
-                <img class="image" src="images/poem/sokh.png">
-              </div>
-          </div>
+           
+                        </p>
+                    </div>
+                    <div class="images-part">
+                        <img class="images-file" src="images/poem/sokh.png">
+                    </div>
+
+                </div>
+
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <i class='bx bx-plus accordion__icon'></i>
+                        <h3 class="accordion__title">বিপর্যয়</h3>
+                    </header>
+    
+                    <div class="accordion__content">
+                        <p class="accordion__description">
+                            সাইরেন...... সাইরেন..........
+রাজার রাজ্য হাসে রণকৌশলী রানীর সমাদরে,
+মন্ত্রী চৌকিদার সাথে সৈন্য সমাহার,
+নৌকায় ডুবিয়ে বাহন, ঘোড়ায় ঘুরপাক,
+হাতিতে বিচরণ, কোণঠাসা মৈত্র সমীকরণ!! 
+রাজা বাচাও, রাজার বাচাও প্রজায় খাটাও, প্রজা হাটাও 
+মনুষ্যত্বে মহামারি, মগজ বোঝাই ক্যান্সারব্যাধি!!
+কিছু অনুভূতির দহন নিঃসঙ্গ নিস্তব্ধতায় বিদীর্ণ হয়ে পরে রয় 
+কিছু উত্তাপ বয়ে চলে ছলছল আঁখির বিনিদ্র আকাশ পানে। 
+কিছু অভিযোগ বয়ে চলে দিঘির জলে শৈবাল ছাদে, 
+জমে থাকা একবিন্দু জলের কৃতজ্ঞতা!
+আজও কিছু স্বপ্ন চিরে বকুল হাসে; 
+শুকিয়ে গেলেও যে সুবাস পাবে! 
+এই যে ধীর প্রতিক্ষা, 
+প্রতিক্ষায় শহরতলীর নাভিশ্বাস বুড়িগঙ্গা শুকিয়ে গেছে; 
+তবুও জাতক স্বপ্ন দেখে সচ্ছল জলের মাঝিরা নোঙ্গর তুলবে! 
+সুজন কুজন দুর্জনের ছলে ডাকি আয়
+সবুজের সিঁতি তুরাগ মুছে যাবে এলোমেলো ঠিকানায়,
+কালো, নিকষকালো থৈথৈ জল আঘাত হেনেছে নিঃসহায়ে 
+ইটের বোঝা বইছে মাঝি নগরীর ঠিকানায়। 
+শীতলক্ষ্যায় সে-তো হিম ধরেছে কার্বন কৃষ্ণকায়
+গাঙচিল পানকৌড়ি বকে অভিশাপ যেচে উঠে ক্ষুব্ধ তৃণমূলে,
+মেঘনায় কালো মেঘ জমেছে, যমুনা অসহায় 
+পদ্মার দুঃখ বাতাসে উড়ায় বিপর্যয় কিনারায়।
+
+                            _রিয়াদ
+                        </p>
+                    </div>
+                    <div class="images-part">
+                        <img class="images-file" src="images/poem/nouka.png">
+                    </div>
+                </div>
+
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <i class='bx bx-plus accordion__icon'></i>
+                        <h3 class="accordion__title">অলক্ষুণে</h3>
+                    </header>
+    
+                    <div class="accordion__content">
+                        <p class="accordion__description">
+                            হুনলাম জংশন ঢালায় মেলা বইছে
+আমারে লইয়া যাইবা কবি,
+ছোডো বেলায় বাজানের লগে মেলায় যাইতাম 
+নাগরদোলা - হাওয়াই মিডাই আর মাডির পুতুল ছাড়া বাড়ি আইতাম না,
+আমাগো অভাবের সংসার আছিলো, তাও বাজান কোনদিন না করে না-ই। 
+আরে আপনারে'ত বাইস্কোপের কতা কইতে ভুইলা গেছি,
+কি যে নেশা আছিলো আমার বাইস্কোপের খুপরিতে। 
+বাইস্কোপের সুবোধ কাকা'ডা মইরা গেছে, কি যে ভালা মানুষ আছিলো।
+ হুনছি; তার পুলাডা এহন গাও গঞ্জে বাইস্কোপে সিনেমা দেহায়, পুলাডা কিন্তু ভালা না, 
+লুকাই লুকাই মাইয়াগো গোসল দেখতো, 
+মাইনসের ঘরে উঁকি ঝুঁকি মারনের লাইগা কতো যে মাইর খাইছে, তাও পুলাডা ভালা অইল না! 
+এহন নাকি উল্ডাপাল্ডা কিসব দেখাই পুলা মাইয়াগো মাথা খাইতাছে,
+বদমাইশ'ডা আর ভালা অইল না! 
+সন্দেশ কাঠালি বাতাসা আর প্রলয় কাকার আচার মা'য়ের অনেক পছন্দ আছিলো, 
+আমি বৈশাখের কড়া রোদে মাডে মাডে ঘুইরা ঝরা ধান কুড়াইতাম, কোড়ছা ভরা ধান সুষমা মাসীর কাছে লইয়া গেলে ছয় আনা দিতো,
+চার আনা দিয়া মা'য়ের লাইগা সন্দেশ বাতাসা আচার আর কয়ডা কাচের চুড়ি লইতাম,
+দুই আনায় বাজানের লাইগা একটা টুপি আর কোর্তা নিতাম, 
+বাড়ি আইলে; মা'য় বকুনি দিতো, আর বাজান কি জানি ভাইব্বা কাইন্দা দিতো! 
+অভাবের সংসার.......
+আফনের লগে যহন আমার বিয়া অইল, ওইদিন আমার পুতুলের বিয়া আছিলো, 
+মা'য়ে ঘাটে'ত্তে ধইরা আইনা শাড়ী পড়াই আপনার লগে দিয়া দিলো,
+মা'রে কতো করে কইলাম; পুতুল বিয়াডা দিয়া আইতাছি, হুনল না!
+আফনের লগে যাওনের সময় মা'য়ের কাশিটা বাইড়া গেলো, চোখের সামনে কাশতে কাশতে কেমনে জানি মইরা গেলো....
+মা'য়ের মরন দেইখা আফনের দাদি কইছিল; কি অলক্ষুণে মাইয়া বিয়া করাইলি সুমতি! 
+আইচ্ছা কবি মা'য়ে মরলে বুঝি অলক্ষুণে হয়! 
+হুনলাম জংশন ঢালায় মেলা বইছে, আমারে লইয়া যাইবা কবি! 
+                            _রিয়াদ
+                        </p>
+                    </div>
+                    <div class="images-part">
+                        <img class="images-file" src="images/poem/chokri.png">
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <i class='bx bx-plus accordion__icon'></i>
+                        <h3 class="accordion__title" id="akash">আকাশের নিলাম</h3>
+                    </header>
+    
+                    <div class="accordion__content">
+                        <p class="accordion__description">
+                            আরে আরে সুমতি বানু যে; কেমন আছ বল শুনি,
+              সোয়া লক্ষ কুটি বছর পর দেখা, না-কি তার-ও বেশি! 
+              তা বটতলায় ঘর বাধার স্বপ্ন'টা কি এখনো আছে! না-কি চকচকে কংক্রিটের মায়ায় হারিয়ে গেছে, 
+              যাই বল; বটতলার ঝর জঞ্জাট থেকে বেচে গেলে, 
+              আচ্ছা বানু আজও কি হেয়ালি দূরত্বে হৃদয়ে ঝর উঠে!  
+              সুমতি বানু 
+              তুমি যে পাশে থাকার শর্তে আকাশটা নিলামে চেয়েছিলে, আকাশ পেয়ে গেছো! 
+              আকাশের নীল কি এখন আর কালো মেঘে ছেয়ে যায় না, 
+              সাদা আঁচল কি বাতাসে ছুটে পালায় না! 
+              কি দামে নিলে আকাশটা.....অর্থ না-কি অগাধ ভালবাসা 
+              সুমতি বানু 
+              তুমি বেচে গেলে, শতবর্ষী বটবৃক্ষ'টা এখন দস্যুদের পেটে
+              বটবৃক্ষের তলায় এখন দেবদারুর চারা গজিয়েছে, ছায়া নেই!
+              দেবদারু গাছের কি মায়া! আশেপাশের সব চড়ুইরা বাসা বেধেছে, 
+              কত হাজার হাজার বিশ্বস্ত সংসার, 
+              বিশ্বস্ত! হা; দেখছ না, জিরাফ চূড়া গাছে একটা'ও বাসা নেই
+              ঝর বাদলের ভয় নেই, তাপ প্রহারের অস্বস্তি নেই।
+              কে, আমি!
+              আকাশ কিনার মুরোদ'টা এখনো হয়ে উঠেনি
+              এই যে দেবদারু গাছটা দেখছ, প্রতিদিন কড়া রোদে চড়ুইদের বিচ্ছেদের অপেক্ষা করি,
+              সমস্যা কি জানো! ঐদিকে চড়ুইরা কেউ বিচ্ছেদ ঘটায়নি 
+              রোজ ঝগড়া হয়, কিন্তু সূর্যের তেজ কমার আগেই তারা নিস্তেজ হয়।
+              এ নিয়ে তুমি ভেবোনা, ডানা ছাড়া প্রাণের সান্নিধ্যে আমি থাকছি না
+              যাই বল; বটতলার ঝর জঞ্জাট থেকে বেচে গেলে, 
+              আচ্ছা বানু আজও কি হেয়ালি দূরত্বে হৃদয়ে ঝর উঠে!
           
-          </div>
+              _রিয়াদ
+                        </p>
+                    </div>
+
+                    <div class="images-part">
+                        <img class="images-file" src="images/poem/akash.png">
+                    </div>
+
+
+                </div>
 
 
 
-              </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </div>
-
-    </div>
-
-
-
-
-
-    <script>
-      // Function to toggle the visibility of the sidebar
-      function toggleSidebar() {
-          var sidebar = document.getElementById("leftSide");
-          sidebar.classList.toggle("show");
-      }
-      </script>
-
+                
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <i class='bx bx-plus accordion__icon'></i>
+                        <h3 class="accordion__title" id="sorol">সরল সুন্দর</h3>
+                    </header>
     
-    <script src="scripts/nav.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        const showButtons = document.querySelectorAll(".show-button");
-        const posts = document.querySelectorAll(".textArea");
-    
-        showButtons.forEach((button, index) => {
-            button.addEventListener("click", function() {
-                scrollToPost(posts[index]);
-            });
-        });
-    
-        function scrollToPost(textArea) {
-            const postPosition = textArea.offsetTop;
-            window.scrollTo({
-                top: postPosition,
-                behavior: "smooth"
-            });
-        }
-    });
-    
-      
-    </script>
-<script src="scripts/share.js"></script>
-<script src="scripts/rereadmore.js"></script>
+                    <div class="accordion__content">
+                        <p class="accordion__description">
+                            ইট বালুর ব্যাস্ত নগরে
+                            যদি একমুঠো রুক্ষ বকুল এনে বলি ভালবাসি,
+                            তবে কি মুঠোভরা ভালবাসায় আমায় আপন করে নেবে,
+                            না-কি কংক্রিটের শুষ্ক আঘাতে হৃদয় চূর্ণবিচূর্ণ হবে!
+                            চক্ষু লজ্জার সীমানা ডিঙিয়ে এ আমার প্রথম পদার্পণ। 
+                            বড্ড তৃষ্ণা পেয়েছে, 
+                            শুষ্ক গলায় যদি দীঘির জলে তৃষ্ণা নিবারণ করি, 
+                            তবে কি খুব ঘৃণা জন্মাবে!
+                            অনেকটা পথ হেটে এসেছি, মাসের শেষ পকেট ফুরিয়ে এসেছে, 
+                            সকাল রাতে কিচ্ছু খাইনি, বলি; তুমি কি বাদাম খাবে!
+                            একাকাশ স্বপ্ন নিয়ে এসেছিলাম, শব্দদূষণে গুলিয়ে গেছে,
+                            দূষণ, আচ্ছা দূষণ ছাড়া কি সম্পর্ক গড়ে! 
+                            চুপ করে আছে যে, বকুল পছন্দ হয় নি, রুক্ষ তাই-না! 
+                            শুঁকে দেখো...
+                            অহ শুদ্ধ গোলাপ ছাড়া বুঝি প্রেম হয় না!
+                            ছেঁড়া জুতা! ওই একটু ফেটে গেছে, সারিয়ে নিলেই হবে
+                            তবে হৃদয় ভাঙ্গার ব্যপারটায় খেয়াল রেখো।
+                            শার্টের কুজ! তা ঘষিয়ে নিব; নিবারন কাকা ছুটিতে আছে
+                            তুমি চাইলে সামনের মাসে নতুন নিয়ে নিবো, চার চারটে টিউশন
+                            তবে হৃদয় ভাঙ্গার ব্যপারটায় খেয়াল রেখো।
+                                _রিয়াদ
+                        </p>
+                    </div>
+
+                    <div class="images-part">
+                        <img class="images-file" src="images/poem/sorol.png">
+                    </div>
 
 
-<script>
-    function toggleReadMore(btn) {
-        var moreContent = btn.previousElementSibling;
-        if (moreContent.style.display === "none") {
-          moreContent.style.display = "block";
-          btn.textContent = "Read less";
-        } else {
-          moreContent.style.display = "none";
-          btn.textContent = "Read more";
-        }
-      }
-  </script>
-  
+                </div>
+               
+            </div>
+        </section>
 
-</body>
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
