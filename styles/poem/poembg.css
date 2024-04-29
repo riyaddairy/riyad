@@ -5,31 +5,40 @@ body {
     padding: 0;
     margin: 0;
     height: 100vh; 
-    
 }
 
 .textArea {
     max-width: 700px;  
     min-width: 400px;  
-    
 }
-.left-side{
-    margin-top: 34px;
+
+.left-side {
+    margin-top: 30px;
+    position: sticky;
+    top: 20px; /* Adjust as needed */
     display: grid;
     width: 200px;
-    height: auto;
-    background-color: white;
+    height: calc(100vh - 50px); /* Adjust according to your layout */
+    background-color: #F0F0FF;
     border: 1px solid black;
     margin-left: 5px;
     padding: 5px;
-    padding-top: 10px;
-    padding-left: 10px;
+    overflow-y: auto; /* Add scroll when content exceeds height */
 }
 
+.index-list {
+    list-style-type: none;
+    padding: 0;
+}
 
+.index-link {
+    color: #1d2855;
+    text-decoration: none;
+}
 
-
-
+.index-link:hover {
+    color: #ff0000; /* Change color on hover as needed */
+}
 
 .toggle-btn {
     position: fixed;
